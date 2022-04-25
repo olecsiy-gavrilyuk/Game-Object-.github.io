@@ -75,17 +75,13 @@ while ((Hero.Morality > 0) && (Hero.Life > 0 && Enemy.Life > 0)) {
     if (Turn == true) {
         Fight = confirm ("Начать бой?(Сбежать -1 ед. морали)");
         if (Fight == true){
-            alert("Урон героя:");
-            alert(Hero.Damage);
-            alert("Урон врага:");
-            alert(Enemy.Damage); 
+            alert(`Урон героя:${Hero.Damage}`);
+            alert(`Урон врага:${Enemy.Damage}`);
             while (Hero.Life > 0 && Enemy.Life > 0) {
                 Enemy.Life = Enemy.Life - Hero.Damage;
-                alert("Жизнь врага");
-                alert(Enemy.Life);
+                alert(`Жизнь врага ${Enemy.Life}`);
                 Hero.Life = Hero.Life - Enemy.Damage;
-                alert("Жизнь героя");
-                alert(Hero.Life);
+                alert(`Жизнь героя ${Hero.Life}`);
             }
             
         } else if (Fight == false) {
